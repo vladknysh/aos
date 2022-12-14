@@ -5,8 +5,7 @@ require 'pry'
 VARIANT = 14
 t_obs = 20.to_f / 100
 lambd = 55**-1
-N = 8
-# N = 13 # optimal 11 for k_z
+N = 17 # optimal is 15 for p_obszd
 p_n_obszd = 0.941
 p_t_obszd = 0.595
 p_l_obszd = 0.952
@@ -47,10 +46,9 @@ end
 puts Terminal::Table.new title: "n = #{N}, t_obs = #{t_obs}, VARIANT #{VARIANT}", headings: headings, rows: rows
 
 g = Gruff::Line.new
-g.title = "Графік залежності P(обс) від кількості процесорів"
+g.title = "Графік залежності P_обс від кількості процесорів"
 g.data 'Р_обс', p_obs_array
-# g.data 'Р_обсзв', p_n_obszd_array
-g.data 'K_з', k_z_array
+g.data 'Р_обсзв', p_n_obszd_array
+# g.data 'K_з', k_z_array
 g.labels = (1..N).to_a.to_h { |n| [n-1, n] }
-# g.write("img/plot1.png")
-g.write("img/plot1.1.png")
+g.write("img/plot2.png")
