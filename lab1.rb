@@ -5,8 +5,8 @@ require 'pry'
 VARIANT = 14
 t_obs = 20.to_f / 100
 lambd = 55**-1
-N = 8
-# N = 13 # optimal 11 for k_z
+# N = 8
+N = 13 # optimal 11 for k_z
 p_n_obszd = 0.941
 p_t_obszd = 0.595
 p_l_obszd = 0.952
